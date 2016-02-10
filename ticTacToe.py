@@ -4,11 +4,43 @@ def printBoard(board):
     # The code in this function should only print, the user should NOT      #
     # interact with this function in any way.                               #
     #                                                                       #
-    # Hint: you can follow the same process that was done in the textbook.  #
+    # Hint: you can follow the same process that was done in the textbook.
+    #theBoard = 
+        print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+        print('-+-+-')
+        print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+        print('-+-+-')
+        print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+    
     #########################################################################
 
 def checkWinner(board, player):    
     print('Checking if ' + player + ' is a winner...')
+
+    # Checking top horizontal
+    if (board['top-L'] == player and board['top-M'] == player and board['top-R'] == player):
+        return True
+    # Checking mid horizantal
+    if (board['mid-L'] == player and board['mid-M'] == player and board['mid-R'] == player):
+        return True
+    # Checking low horizantal
+    if (board['low-L'] == player and board['low-M'] == player and board['low-R'] == player):
+        return True
+    # Checking first vertical
+    if (board['top-L'] == player and board['mid-L'] == player and board['low-L'] == player):
+        return True
+    # Checking second vartical
+    if (board['top-M'] == player and board['mid-M'] == player and board['low-M'] == player):
+        return True
+    # Cheking third vartical
+    if (board['top-R'] == player and board['mid-R'] == player and board['low-R'] == player):
+        return True
+    if (board['top-L'] == player and board['mid-M'] == player and board['low-R'] == player):
+       return True
+    if (board['top-R'] == player and board['mid-M'] == player and board['low-L'] == player):
+        return True 
+    return False
     
     # TO DO #################################################################
     # Write code in this function that checks the tic-tac-toe board          #
