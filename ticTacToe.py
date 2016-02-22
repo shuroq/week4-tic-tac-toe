@@ -58,23 +58,23 @@ def startGame(startingPlayer, board):
     # is happening. You do not need to modify any of the Python code        #
     #########################################################################
 
-    turn = startingPlayer its put turn equal to the starting player 
+    turn = startingPlayer  #put turn equal to the starting player 
     for i in range(9): 
-        printBoard(board) the board will appear 
-        print('Turn for ' + turn + '. Move on which space?') it will ask  the player to start and it will also ask about the space 
-        move = input() the player will put the desire space 
-        board[move] = turn the board will apear again with the new change which is the new x or o 
-        if( checkWinner(board, 'X') ): if player x acheive one of the 3 ways to win 
-            print('X wins!') it will print X wins 
+        printBoard(board) #the board will appear 
+        print('Turn for ' + turn + '. Move on which space?') #it will ask  the player to start and it will also ask about the space 
+        move = input() #the player will put the desire space 
+        board[move] = turn #the board will apear again with the new change which is the new x or o 
+        if( checkWinner(board, 'X') ): #if player x acheive one of the 3 ways to win 
+            print('X wins!') #it will print X wins 
             break 
-        elif ( checkWinner(board, 'O') ):if player O acheive one of the 3 ways to win 
-            print('O wins!') it will print O wins 
-            break  no one won 
+        elif ( checkWinner(board, 'O') ):#if player O acheive one of the 3 ways to win 
+            print('O wins!') #it will print O wins 
+            break # no one won 
     
         if turn == 'X':  
-            turn = 'O'player o will play 
+            turn = 'O'#player o will play 
         else:
-            turn = 'X'player x will play 
+            turn = 'X'#player x will play 
         
-    printBoard(board) start new game 
+    printBoard(board) #start new game 
     
